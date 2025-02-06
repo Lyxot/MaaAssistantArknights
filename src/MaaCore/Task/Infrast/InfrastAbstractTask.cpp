@@ -561,6 +561,7 @@ void asst::InfrastAbstractTask::click_return_button()
 {
     LogTraceFunction;
     ProcessTask(*this, { "Infrast@ReturnButton" }).run();
+    sleep(500); // 返回按钮点完之后，需要一个延迟，防止多次点击返回退出基建
 }
 
 bool asst::InfrastAbstractTask::click_bottom_left_tab()
